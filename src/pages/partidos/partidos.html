@@ -1,7 +1,16 @@
 <ion-header>
 
     <ion-navbar>
-        <ion-title>Partidos</ion-title>
+        <ion-toolbar>
+            <ion-title>
+                Partidos
+            </ion-title>
+            <ion-buttons end>
+                <button ion-button icon-only (click)="salir($event)">
+                    <ion-icon name="log-out"></ion-icon>
+                </button>
+            </ion-buttons>
+        </ion-toolbar>
     </ion-navbar>
     <ion-item no-lines class="tit">
         <h3 text-center>
@@ -20,8 +29,8 @@
             <img src="../../assets/imgs/Banderas/{{p.home_team.country}}.png" alt="Imagen del equipo" width="30" height="15"> {{p.home_team.code}} {{p.home_team.goals}} - {{p.away_team.goals}} {{p.away_team.code}}
             <img src="../../assets/imgs/Banderas/{{p.away_team.country}}.png" alt="Imagen del equipo" width="30" height="15">
             <p text-center class="estado" *ngIf=" p.status == 'completed'">Terminado</p>
-            <p text-center class = "estado" *ngIf=" p.status != 'completed'">No Terminado</p>
+            <p text-center class="estado" *ngIf=" p.status != 'completed'">No Terminado</p>
         </button>
-       
+
     </ion-list>
 </ion-content>

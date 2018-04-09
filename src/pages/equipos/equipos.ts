@@ -4,6 +4,7 @@ import { EquipoDetailsPage } from '../equipo-details/equipo-details';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { LoadingController } from 'ionic-angular';
 import { Observable } from '@firebase/util';
+import { AuthProvider } from '../../providers/auth/auth';
 @IonicPage()
 @Component({
   selector: 'page-equipos',
@@ -19,7 +20,8 @@ export class EquiposPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public afDatabase: AngularFireDatabase,
-    public loadingCtrl: LoadingController) {
+    public loadingCtrl: LoadingController, 
+    public auth: AuthProvider) {
 
     this.listaEquipos = this.afDatabase.list('/Equipos');
     this.equipos = this.listaEquipos.valueChanges();
@@ -32,6 +34,9 @@ export class EquiposPage {
     this.navCtrl.push(EquipoDetailsPage, {
       equipos: equipo
     });
+  }
+  salir(){
+    this.auth.logout();
   }
   presentLoading() {
     let loader = this.loadingCtrl.create({

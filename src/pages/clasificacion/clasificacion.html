@@ -7,7 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Clasificacion</ion-title>
+      <ion-toolbar>
+          <ion-title>
+              Clasificacion
+            </ion-title>
+        <ion-buttons end>
+          <button ion-button icon-only (click)="salir($event)">
+            <ion-icon name="log-out"></ion-icon>
+          </button>
+        </ion-buttons>
+      </ion-toolbar>
   </ion-navbar>
   <!--<div class="rp">
     <img src="../../assets/imgs/mundial.jpg" alt="Imagen del equipo" width="60" height="30" class="img"> Clasificacion

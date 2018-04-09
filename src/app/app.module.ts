@@ -13,6 +13,7 @@ import { PartidosDetailsPage } from '../pages/partidos-details/partidos-details'
 import { TabsPage } from '../pages/tabs/tabs';
 import {ClasificacionPage} from '../pages/clasificacion/clasificacion';
 import {ClasificacionDetailsPage} from "../pages/clasificacion-details/clasificacion-details";
+//Autoprovider
 //Importacion de social sharing
 import { SocialSharing } from '@ionic-native/social-sharing';
 //Importacion de pipe/ordenar
@@ -20,6 +21,9 @@ import { SortPipe } from '../pipes/sort/sort';
 //Importacion de AngularFireBase2 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthProvider } from '../providers/auth/auth';
+import { RegistroPage } from '../pages/registro/registro';
 //Exportacion de AngularFireBase2 Configuracion
 export const config = {
   apiKey: "AIzaSyDdiLGK0Bpqxq-VKobt9XzxbxbPItIkDV0",
@@ -41,14 +45,16 @@ export const config = {
     PartidosDetailsPage,
     ClasificacionPage,
     ClasificacionDetailsPage,
-    SortPipe
+    SortPipe,
+    RegistroPage
 
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(config),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -60,7 +66,8 @@ export const config = {
     EquipoDetailsPage,
     PartidosDetailsPage,
     ClasificacionPage,
-    ClasificacionDetailsPage
+    ClasificacionDetailsPage,
+    RegistroPage
 
   ],
   providers: [
@@ -68,6 +75,7 @@ export const config = {
     SplashScreen,
     SocialSharing,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
+    AuthProvider,
   ]
 })
 export class AppModule { }

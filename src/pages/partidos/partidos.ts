@@ -5,6 +5,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { ToastController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 import { Observable } from '@firebase/util';
+import { AuthProvider } from '../../providers/auth/auth';
 @IonicPage()
 @Component({
   selector: 'page-partidos',
@@ -21,7 +22,8 @@ export class PartidosPage {
     public navParams: NavParams,
     public afDatabase: AngularFireDatabase,
     private toastCtrl: ToastController,
-    public loadingCtrl: LoadingController) {
+    public loadingCtrl: LoadingController,
+    public auth: AuthProvider) {
     this.listaPartidos = this.afDatabase.list('/Partidos');
     this.partido = this.listaPartidos.valueChanges();
     this.partido.subscribe(result => {
@@ -43,6 +45,9 @@ export class PartidosPage {
     
     //console.log(this.nPartidos.length);
 
+  }
+  salir(){
+    this.auth.logout();
   }
 
   presentToast() {

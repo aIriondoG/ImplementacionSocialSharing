@@ -10,6 +10,7 @@ import { Observable } from '@firebase/util';
 import { EquipoDetailsPage } from '../equipo-details/equipo-details';
 //Importacion de ordenar
 //import { Ordenar } from '../../app/pipes/miPipe';
+import { AuthProvider } from '../../providers/auth/auth';
 
 @IonicPage()
 @Component({
@@ -35,7 +36,8 @@ export class ClasificacionPage {
     public navCtrl: NavController,
     public navParams: NavParams,
     public afDatabase: AngularFireDatabase,
-    public loadingCtrl: LoadingController
+    public loadingCtrl: LoadingController, 
+    public auth: AuthProvider
   ) {
     this.falso = false;
     this.items = [];
@@ -67,6 +69,7 @@ export class ClasificacionPage {
         //console.log("Despues: " + this.equipoA);
       }
     );
+    
 
 
 
@@ -75,6 +78,9 @@ export class ClasificacionPage {
     //this.cargaGrupos();
 
 
+  }
+  salir(){
+    this.auth.logout();
   }
   sort() {
     this.descending = !this.descending;
