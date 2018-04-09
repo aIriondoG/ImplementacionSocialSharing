@@ -5,6 +5,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { LoadingController } from 'ionic-angular';
 import { Observable } from '@firebase/util';
 import { AuthProvider } from '../../providers/auth/auth';
+
 @IonicPage()
 @Component({
   selector: 'page-equipos',
