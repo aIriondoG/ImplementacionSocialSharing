@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Detalles del partido</ion-title>
+  </ion-navbar>
+  <ion-item no-lines class="datos">
+    <p text-center class="text">
+      {{sItem.location}}
+    </p>
+    <h5 text-center class="datos-text">
+      <img src="../../assets/imgs/Banderas/{{sItem.home_team.country}}.png" alt="Imagen del equipo local" width="30" height="15"> {{sItem.home_team.country}} {{sItem.home_team.goals}} - {{sItem.away_team.goals}} {{sItem.away_team.country}}
+      <img src="../../assets/imgs/Banderas/{{sItem.away_team.country}}.png" alt="Imagen del equipo visitante" width="30" height="15">
+    </h5>
+    <p text-center class="text" *ngIf=" sItem.status == 'completed'">
+      Terminado
+    </p>
+    <p text-center class="text" *ngIf=" sItem.status != 'completed'">
+      No Terminado
+    </p>
+  </ion-item>
+</ion-header>
+<ion-content class="inicio">
+
+
+
+  <!--<p *ngIf=" se.local == 's'" text-left>{{se.time}}'' {{se.type}}: {{se.player}}</p>
+      <p *ngIf=" se.local == 'n'" text-right> {{se.time}}'' {{se.type}}: {{se.player}}</p>-->
+
+  <div style="float: left; width: 45%" class="listaLeft">
+    <p text-left *ngFor="let s of sEventoLocal">
+      <img src="../../assets/imgs/iconos-eventos/{{s.type_of_event}}.png" alt="Imagen del mundial femenino" width="20" height="20"> {{s.time}}'' {{s.type_of_event}}:
+      <br> {{s.player}}
+    </p>
+  </div>
+
+  <div style="float: right; width: 45%" class="listaRight">
+    <p text-left *ngFor="let v of sEventoVisitante">
+      <img src="../../assets/imgs/iconos-eventos/{{v.type_of_event}}.png" alt="Imagen del mundial femenino" width="20" height="20"> {{v.time}}'' {{v.type_of_event}}:
+      <br> {{v.player}}
+    </p>
+  </div>
+
+
+</ion-content>

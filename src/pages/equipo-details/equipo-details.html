@@ -1,0 +1,52 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>Detalles del Equipo</ion-title>
+    </ion-navbar>
+    
+</ion-header>
+
+
+<ion-content class="inicio">
+
+    <p></p>
+    <ion-list class="lista">
+            <ion-item   class="nom">
+                    <h3 text-center text-uppercase class="nom_text">
+                        <img src="../../assets/imgs/Banderas/{{sItem.country}}.png" alt="Imagen del equipo" width="30" height="15"> 
+                         {{sItem.country}}
+                    </h3>
+                </ion-item>
+     
+        <ion-item  class="datos">
+            Partidos ganados: {{sItem.wins}}
+        </ion-item>
+        <ion-item class="datos">
+            Partidos empatados: {{sItem.draws}}
+        </ion-item>
+        <ion-item class="datos">
+            Partidos perdidos: {{sItem.losses}}
+        </ion-item>
+        <ion-item class="datos">
+            Partidos jugados: {{sItem.wins+sItem.draws+sItem.losses}}
+        </ion-item>
+        <ion-item class="datos">
+            Goles marcados: {{sItem.goals_for}}
+        </ion-item>
+        <ion-item class="datos">
+            Goles encajados: {{sItem.goals_against}}
+        </ion-item>
+        <ion-item class="datos">
+            Diferencia de goles: {{sItem.goals_for-sItem.goals_against}}
+        </ion-item>
+        
+    </ion-list>
+    <!--<ul text_center>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>-->
+
+</ion-content>

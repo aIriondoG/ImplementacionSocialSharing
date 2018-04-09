@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Equipos</ion-title>
+  </ion-navbar>
+  <!--<ion-searchbar (ionInput)="getItems($event)">Barra</ion-searchbar>-->
+</ion-header>
+
+<ion-content class="inicio">
+  <ion-list class="lista">
+    <ion-card *ngFor="let eq of equipos | async" (click)="itemTapped($event, eq)" class="carta">
+      <img src="../../assets/imgs/Banderas/{{eq.country}}.png" alt="Imagen del equipo" width="110" height="110">
+      <div text-center class="card-title"> 
+        {{eq.country}}
+      </div>
+    </ion-card>
+
+
+
+  </ion-list>
+</ion-content>

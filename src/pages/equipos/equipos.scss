@@ -1,0 +1,66 @@
+page-equipos {
+   
+    ion-card {
+        position: relative;
+        text-align: center;
+        //text-align: start;
+      }
+      .carta{
+        background-color: rgba(0,0,0,0.0);
+        width: 80%;
+        height: 100%;
+        left: 7%;
+      }
+      .card-title {
+        position: relative;
+        font-size: 1.5em;
+        //top:-50%;
+        width: 100%;
+        font-weight: bold;
+        color:white;
+        background-color: rgba(0,0,0,0.4);
+      }
+    
+    .inicio{
+        background-image: url("../../assets/imgs/futbol4.jpg");
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-attachment:fixed;
+        -o-background-size: 100% 100%, auto;
+        -moz-background-size: 100% 100%, auto;
+        -webkit-background-size: 100% 100%, auto;
+        background-size: 100% 100%, auto;
+        
+        //background-color: red;
+    }
+    button{
+        
+    }
+    .txt{
+        color:white;
+        //opacity: 0.8;
+    }
+
+    .nom{
+        //background-color: black;
+        background-color:rgba(0,0,0,0.0); /* rgbA */
+        //color:white;
+    }:hover
+   
+    .btn{
+        background-color: rgba(0,0,0,0.5);
+        color: white;
+    }
+    .fc{
+        color:white;
+    }
+    .lista{
+        background-color: rgba(0,0,0,0.0);
+        color: white;
+        margin-top: 2em;
+        margin-left: 2em;
+        margin-right: 2em;
+
+    }
+    
+}

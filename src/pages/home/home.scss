@@ -1,0 +1,30 @@
+page-home {
+    .inicio{
+        background-image: url("../../assets/imgs/futbol.jpg");
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-attachment:fixed;
+        -o-background-size: 100% 100%, auto;
+        -moz-background-size: 100% 100%, auto;
+        -webkit-background-size: 100% 100%, auto;
+        background-size: 100% 100%, auto;
+
+        //background-color: red;
+    }
+    h6{
+        margin: 0.5em;
+        margin-top:2em;
+        color:white;
+    }
+    p{
+        color: white;
+        text-align: center;
+        margin-left: 3em;
+        margin-right: 3em;
+        border: white 1px solid;
+    }
+    img{
+        margin-left:7em;
+    }
+   
+}

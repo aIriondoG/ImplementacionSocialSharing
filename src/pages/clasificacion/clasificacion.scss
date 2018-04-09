@@ -1,0 +1,48 @@
+page-clasificacion {
+    .inicio{
+        background-image: url("../../assets/imgs/mundial.jpg");
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-attachment:fixed;
+        -o-background-size: 100% 100%, auto;
+        -moz-background-size: 100% 100%, auto;
+        -webkit-background-size: 100% 100%, auto;
+        background-size: 100% 100%, auto;
+        color:white;
+
+        //background-color: red;
+    }
+    .rp{
+        background-image: url("../../assets/imgs/mundial.jpg");
+        background-repeat:no-repeat;
+        background-position:center center;
+        background-attachment:fixed;
+        -o-background-size: 100% 100%, auto;
+        -moz-background-size: 100% 100%, auto;
+        -webkit-background-size: 100% 100%, auto;
+        background-size: 100% 100%, auto;
+    }
+        .bot{
+        background-color:rgba(0, 0, 0,0.6);
+        text-align:left;
+        color:white;
+    }
+    .btn{
+        background-color:rgba(0, 0, 0,0.0);
+        text-align:left;
+        color:white;
+    }
+   
+    .tit{
+        background-color:rgba(255, 255, 255,0.75);
+        text-align:center;
+        color:black;
+    }
+    .lista{
+        
+        margin-top: 4em;
+        margin-left: 3em;
+        margin-right: 3em;
+        
+    }
+}
