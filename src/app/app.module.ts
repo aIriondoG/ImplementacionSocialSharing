@@ -13,6 +13,8 @@ import { PartidosDetailsPage } from '../pages/partidos-details/partidos-details'
 import { TabsPage } from '../pages/tabs/tabs';
 import {ClasificacionPage} from '../pages/clasificacion/clasificacion';
 import {ClasificacionDetailsPage} from "../pages/clasificacion-details/clasificacion-details";
+//Importacion de social sharing
+import { SocialSharing } from '@ionic-native/social-sharing';
 //Importacion de pipe/ordenar
 import { SortPipe } from '../pipes/sort/sort';
 //Importacion de AngularFireBase2 
@@ -64,6 +66,7 @@ export const config = {
   providers: [
     StatusBar,
     SplashScreen,
+    SocialSharing,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
   ]
 })

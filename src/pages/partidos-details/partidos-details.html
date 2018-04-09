@@ -2,6 +2,15 @@
   <ion-navbar>
     <ion-title>Detalles del partido</ion-title>
   </ion-navbar>
+  <ion-fab right top>
+    <button ion-fab color="light"><ion-icon name="share-alt"></ion-icon></button>
+    <ion-fab-list side="bottom">
+      <button ion-fab (click)="viaFacebook(sItem)"><ion-icon name="logo-facebook"></ion-icon></button>
+      <button ion-fab (click)="viaTwitter(sItem)"><ion-icon name="logo-twitter"></ion-icon></button>
+      <button ion-fab (click)="viaWhatsapp(sItem)"><ion-icon name="logo-whatsapp"></ion-icon></button>
+      <button ion-fab (click)="viaIG(sItem)"><ion-icon name="logo-instagram"></ion-icon></button>
+    </ion-fab-list>
+  </ion-fab>
   <ion-item no-lines class="datos">
     <p text-center class="text">
       {{sItem.location}}
@@ -17,6 +26,7 @@
       No Terminado
     </p>
   </ion-item>
+
 </ion-header>
 <ion-content class="inicio">
 
