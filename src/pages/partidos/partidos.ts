@@ -6,6 +6,8 @@ import { ToastController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 import { Observable } from '@firebase/util';
 import { AuthProvider } from '../../providers/auth/auth';
+import { StatusBar } from '@ionic-native/status-bar';
+
 @IonicPage()
 @Component({
   selector: 'page-partidos',
@@ -16,14 +18,16 @@ export class PartidosPage {
   date: string;
   nPartidos: any;
   listaPartidos: AngularFireList<any>;
-  partido: any[];
+  partido: Observable<any>;
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
     public afDatabase: AngularFireDatabase,
     private toastCtrl: ToastController,
     public loadingCtrl: LoadingController,
-    public auth: AuthProvider) {
+    public auth: AuthProvider,
+    private statusBar: StatusBar) {
+    this.statusBar.hide();
     this.listaPartidos = this.afDatabase.list('/Partidos');
     this.partido = this.listaPartidos.valueChanges();
     this.partido.subscribe(result => {
@@ -35,20 +39,21 @@ export class PartidosPage {
 
     this.presentLoading();
     console.log("----");
-    if(this.nPartidos != null){
+    if (this.nPartidos != null) {
       this.filtroPartido();
-    }else{
-      console.log("Lo hemos intentado"+this.nPartidos);
+    } else {
+      console.log("Lo hemos intentado" + this.nPartidos);
     }
-    
+
     //this.partido.subscribe(result => {result.length});
-    
+
     //console.log(this.nPartidos.length);
 
   }
-  salir(){
+  salir() {
     this.auth.logout();
   }
+
 
   presentToast() {
     let toast = this.toastCtrl.create({
@@ -73,32 +78,32 @@ export class PartidosPage {
   }
 
   filtroPartido() {
-    if (this.nPartidos != null) { 
-    console.log("Metodo filtro partido");
+    if (this.nPartidos != null) {
+      console.log("Metodo filtro partido");
 
-    if (this.partido != null) {
-      //console.log("Filtramos date , " + this.partido.length);
-      for (let i = 0; i < this.nPartidos.length; i++) {
-        console.log(this.nPartidos.length);
-        console.log("--" + this.date + "--" + this.partido[i].datetime);
-        this.date = this.partido[i].datetime.substring(8, 10);
-        this.date = this.date + "/" + this.partido[i].datetime.substring(5, 7);
-        this.date = this.date + " " + this.partido[i].datetime.substring(12, 16) + "h.";
-        this.partido[i].datetime = this.date;
+      if (this.partido != null) {
+        //console.log("Filtramos date , " + this.partido.length);
+        for (let i = 0; i < this.nPartidos.length; i++) {
+          console.log(this.nPartidos.length);
+          console.log("--" + this.date + "--" + this.partido[i].datetime);
+          this.date = this.partido[i].datetime.substring(8, 10);
+          this.date = this.date + "/" + this.partido[i].datetime.substring(5, 7);
+          this.date = this.date + " " + this.partido[i].datetime.substring(12, 16) + "h.";
+          this.partido[i].datetime = this.date;
 
+        }
+      } else {
+        this.presentToast();
       }
     } else {
-      this.presentToast();
+      console.log("Demomento null");
     }
-  }else{
-    console.log("Demomento null");
   }
-}
 
-itemTapped(event, partido) {
-  this.navCtrl.push(PartidosDetailsPage, {
-    partido: partido,
-  });
-}
+  itemTapped(event, partido) {
+    this.navCtrl.push(PartidosDetailsPage, {
+      partido: partido,
+    });
+  }
 
 }
