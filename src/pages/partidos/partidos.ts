@@ -7,6 +7,7 @@ import { LoadingController } from 'ionic-angular';
 import { Observable } from '@firebase/util';
 import { AuthProvider } from '../../providers/auth/auth';
 import { StatusBar } from '@ionic-native/status-bar';
+import { ContactoPage } from '../contacto/contacto';
 
 @IonicPage()
 @Component({
@@ -53,6 +54,13 @@ export class PartidosPage {
   salir() {
     this.auth.logout();
   }
+  contacto(event) {
+    
+    this.navCtrl.push(ContactoPage, {
+      
+    });
+  
+}
 
 
   presentToast() {

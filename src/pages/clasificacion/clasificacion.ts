@@ -11,6 +11,7 @@ import { EquipoDetailsPage } from '../equipo-details/equipo-details';
 //Importacion de ordenar
 //import { Ordenar } from '../../app/pipes/miPipe';
 import { AuthProvider } from '../../providers/auth/auth';
+import { ContactoPage } from '../contacto/contacto';
 
 @IonicPage()
 @Component({
@@ -101,6 +102,12 @@ export class ClasificacionPage {
     } else {
       console.log("E = null");
     }
+  }
+  contacto(event) {
+    
+      this.navCtrl.push(ContactoPage, {  
+      });
+    
   }
 
 }

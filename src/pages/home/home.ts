@@ -4,6 +4,7 @@ import { ClasificacionPage } from '../clasificacion/clasificacion';
 import { EquiposPage } from '../equipos/equipos';
 import { RegistroPage } from '../registro/registro';
 import { AuthProvider } from '../../providers/auth/auth';
+import { ContactoPage } from '../contacto/contacto';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
@@ -20,7 +21,13 @@ export class HomePage {
   salir(){
     this.auth.logout();
   }
-
+  contacto(event) {
+    
+    this.navCtrl.push(ContactoPage, {
+      
+    });
+  
+}
 
   
 }

@@ -24,6 +24,9 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
 import { RegistroPage } from '../pages/registro/registro';
+import { ContactoPage } from '../pages/contacto/contacto';
+import { EmailComposer } from '@ionic-native/email-composer';
+
 //Exportacion de AngularFireBase2 Configuracion
 export const config = {
   apiKey: "AIzaSyDdiLGK0Bpqxq-VKobt9XzxbxbPItIkDV0",
@@ -46,7 +49,8 @@ export const config = {
     ClasificacionPage,
     ClasificacionDetailsPage,
     SortPipe,
-    RegistroPage
+    RegistroPage,
+    ContactoPage
 
   ],
   imports: [
@@ -67,13 +71,15 @@ export const config = {
     PartidosDetailsPage,
     ClasificacionPage,
     ClasificacionDetailsPage,
-    RegistroPage
+    RegistroPage,
+    ContactoPage
 
   ],
   providers: [
     StatusBar,
     SplashScreen,
     SocialSharing,
+    EmailComposer,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthProvider,
   ]

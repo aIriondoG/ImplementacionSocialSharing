@@ -5,6 +5,7 @@ import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { LoadingController } from 'ionic-angular';
 import { Observable } from '@firebase/util';
 import { AuthProvider } from '../../providers/auth/auth';
+import { ContactoPage } from '../contacto/contacto';
 
 @IonicPage()
 @Component({
@@ -46,6 +47,13 @@ export class EquiposPage {
     });
     loader.present();
   }
+  contacto(event) {
+    
+    this.navCtrl.push(ContactoPage, {
+      
+    });
+  
+}
   /*getItems(ev: any) {
     // Reset items back to all of the items
     this.equipos = this.items;
