@@ -1,0 +1,9 @@
+iioComandos para conectarse con google maps:
+- ionic cordova platform add android
+- ionic cordova platform add ios
+- ionic cordova plugin add cordova-plugin-googlemaps --variable API_KEY_FOR_ANDROID="" --variable API_KEY_FOR_IOS="" --save
+- ionic npm install @ionic-native/google-maps --save
+- ionic cordova run android --prod
+
+Las Api Key se sacan de aqui:
+https://developers.google.com/maps/android/?hl=es-419

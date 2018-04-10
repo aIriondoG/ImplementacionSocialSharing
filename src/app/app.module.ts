@@ -26,7 +26,9 @@ import { AuthProvider } from '../providers/auth/auth';
 import { RegistroPage } from '../pages/registro/registro';
 import { ContactoPage } from '../pages/contacto/contacto';
 import { EmailComposer } from '@ionic-native/email-composer';
-
+//Implementacion de maps
+import { GoogleMaps } from '@ionic-native/google-maps';
+import { MapaPage } from '../pages/mapa/mapa';
 //Exportacion de AngularFireBase2 Configuracion
 export const config = {
   apiKey: "AIzaSyDdiLGK0Bpqxq-VKobt9XzxbxbPItIkDV0",
@@ -50,7 +52,8 @@ export const config = {
     ClasificacionDetailsPage,
     SortPipe,
     RegistroPage,
-    ContactoPage
+    ContactoPage,
+    MapaPage
 
   ],
   imports: [
@@ -72,7 +75,8 @@ export const config = {
     ClasificacionPage,
     ClasificacionDetailsPage,
     RegistroPage,
-    ContactoPage
+    ContactoPage,
+    MapaPage
 
   ],
   providers: [
@@ -80,6 +84,7 @@ export const config = {
     SplashScreen,
     SocialSharing,
     EmailComposer,
+    GoogleMaps,
     { provide: ErrorHandler, useClass: IonicErrorHandler },
     AuthProvider,
   ]

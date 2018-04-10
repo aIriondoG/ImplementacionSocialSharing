@@ -1,0 +1,41 @@
+[33mcommit ace1104bf57c0fc2cdacca57d341100f4a2f775a[m[33m ([m[1;36mHEAD -> [m[1;32mdevelop[m[33m, [m[1;31morigin/develop[m[33m)[m
+Author: Adrián Iriondo González <airiondo@cic.es>
+Date:   Tue Apr 10 11:59:59 2018 +0200
+
+    Añadido un boton de contacto con e que se puede mandar mensajes a la base de datos y al correo
+
+[33mcommit 65dae460dd69fa89b73fb55aae2844dfc4b3060e[m
+Author: Adrián Iriondo González <airiondo@cic.es>
+Date:   Mon Apr 9 18:27:25 2018 +0200
+
+    Añadido a equipos un sharing
+
+[33mcommit def944ea44d2783e0744f89ae273d870bdbc4dac[m
+Author: Adrián Iriondo González <airiondo@cic.es>
+Date:   Mon Apr 9 17:53:39 2018 +0200
+
+    Añadido un socialShare a equipo-details
+
+[33mcommit 5a39aca900ff500cb3380c3faa7aa68689477c85[m
+Author: Adrián Iriondo González <airiondo@cic.es>
+Date:   Mon Apr 9 17:29:16 2018 +0200
+
+    Añadido control de usuarios
+
+[33mcommit d48b5a5b11bd32e321894eda534aa4b29e5b4c81[m
+Author: Adrián Iriondo González <airiondo@cic.es>
+Date:   Mon Apr 9 16:27:17 2018 +0200
+
+    Añadido un fab con envios por plataformas"
+
+[33mcommit e4e21002b618726a94043840cea3185ec69713f4[m
+Author: Adrián Iriondo González <airiondo@cic.es>
+Date:   Mon Apr 9 13:53:56 2018 +0200
+
+    MundialFemeninoFireBase
+
+[33mcommit a842101ad9802a63a6dda73d1f8c41ab593c829f[m[33m ([m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmaster[m[33m)[m
+Author: aIriondoG <38033693+aIriondoG@users.noreply.github.com>
+Date:   Mon Apr 9 13:48:28 2018 +0200
+
+    Initial commit

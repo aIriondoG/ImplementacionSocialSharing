@@ -6,9 +6,11 @@
   </ion-navbar>
 
   <ion-item no-lines class="datos">
-    <p text-center class="text">
+   
+    <button ion-button center color="light" (click)="localizar($event ,sItem.location )" class="textLo">
+      <ion-icon name="locate"></ion-icon>
       {{sItem.location}}
-    </p>
+    </button>
     <h5 text-center class="datos-text">
       <img src="../../assets/imgs/Banderas/{{sItem.home_team.country}}.png" alt="Imagen del equipo local" width="30" height="15"> {{sItem.home_team.country}} {{sItem.home_team.goals}} - {{sItem.away_team.goals}} {{sItem.away_team.country}}
       <img src="../../assets/imgs/Banderas/{{sItem.away_team.country}}.png" alt="Imagen del equipo visitante" width="30" height="15">
@@ -19,6 +21,7 @@
     <p text-center class="text" *ngIf=" sItem.status != 'completed'">
       No Terminado
     </p>
+    
   </ion-item>
 
 </ion-header>
@@ -61,6 +64,7 @@
       </button>
     </ion-fab-list>
   </ion-fab>
+  
 
 
 </ion-content>

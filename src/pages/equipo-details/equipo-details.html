@@ -2,40 +2,40 @@
     <ion-navbar>
         <ion-title>Detalles del Equipo</ion-title>
     </ion-navbar>
-    
+
 </ion-header>
 
 
 <ion-content class="inicio">
-        <ion-fab right bottom>
-                <button ion-fab color="light">
-                  <ion-icon name="share-alt"></ion-icon>
-                </button>
-                <ion-fab-list side="left">
-                  <button ion-fab (click)="viaFacebook(sItem)">
-                    <ion-icon name="logo-facebook"></ion-icon>
-                  </button>
-                  <button ion-fab (click)="viaTwitter(sItem)">
-                    <ion-icon name="logo-twitter"></ion-icon>
-                  </button>
-                  <button ion-fab (click)="viaWhatsapp(sItem)">
-                    <ion-icon name="logo-whatsapp"></ion-icon>
-                  </button>
-                  <button ion-fab (click)="viaIG(sItem)">
-                    <ion-icon name="logo-instagram"></ion-icon>
-                  </button>
-                </ion-fab-list>
-              </ion-fab>
+    <ion-fab right bottom>
+        <button ion-fab color="light">
+            <ion-icon name="share-alt"></ion-icon>
+        </button>
+        <ion-fab-list side="left">
+            <button ion-fab (click)="viaFacebook(sItem)">
+                <ion-icon name="logo-facebook"></ion-icon>
+            </button>
+            <button ion-fab (click)="viaTwitter(sItem)">
+                <ion-icon name="logo-twitter"></ion-icon>
+            </button>
+            <button ion-fab (click)="viaWhatsapp(sItem)">
+                <ion-icon name="logo-whatsapp"></ion-icon>
+            </button>
+            <button ion-fab (click)="viaIG(sItem)">
+                <ion-icon name="logo-instagram"></ion-icon>
+            </button>
+        </ion-fab-list>
+    </ion-fab>
+   
     <p></p>
     <ion-list class="lista">
-            <ion-item   class="nom">
-                    <h3 text-center text-uppercase class="nom_text">
-                        <img src="../../assets/imgs/Banderas/{{sItem.country}}.png" alt="Imagen del equipo" width="30" height="15"> 
-                         {{sItem.country}}
-                    </h3>
-                </ion-item>
-     
-        <ion-item  class="datos">
+        <ion-item class="nom">
+            <h3 text-center text-uppercase class="nom_text">
+                <img src="../../assets/imgs/Banderas/{{sItem.country}}.png" alt="Imagen del equipo" width="30" height="15"> {{sItem.country}}
+            </h3>
+        </ion-item>
+
+        <ion-item class="datos">
             Partidos ganados: {{sItem.wins}}
         </ion-item>
         <ion-item class="datos">
@@ -56,7 +56,7 @@
         <ion-item class="datos">
             Diferencia de goles: {{sItem.goals_for-sItem.goals_against}}
         </ion-item>
-        
+
     </ion-list>
     <!--<ul text_center>
     <li></li>

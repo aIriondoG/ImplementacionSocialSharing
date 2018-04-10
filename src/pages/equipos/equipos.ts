@@ -3,15 +3,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { EquipoDetailsPage } from '../equipo-details/equipo-details';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { LoadingController } from 'ionic-angular';
-import { Observable } from '@firebase/util';
 import { AuthProvider } from '../../providers/auth/auth';
 import { ContactoPage } from '../contacto/contacto';
-
+import {Observable} from 'rxjs/Rx';
+ import 'rxjs/add/operator/map';
 @IonicPage()
 @Component({
   selector: 'page-equipos',
   templateUrl: 'equipos.html',
 })
+
 export class EquiposPage {
   items: Observable<any[]>;
   searchQuery: string = '';

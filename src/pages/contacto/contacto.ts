@@ -28,7 +28,7 @@ export class ContactoPage {
     this.comentarios = this.listaComentarios.snapshotChanges();
   }
   enviarMensaje() {
-    let email = {
+    /*let email = {
       to: 'adrianiriondo96@gmail.com',
       subject: 'Problema o sugerencia del usuario:'+this.auth.User,
       body: this.mensaje,
@@ -41,7 +41,7 @@ export class ContactoPage {
       }else{
         console.log("No disponible email composer");
       }
-     });
+     });*/
    
     this.listaComentarios.push({
       Usuario: this.auth.User,

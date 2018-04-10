@@ -26,9 +26,9 @@
 
 
         <button text-center ion-item no-lines *ngFor="let p of partido  | async" class="btn" (click)="itemTapped($event, p)">
-            <!--<p text-center class="fecha">
-                {{p.datetime}}
-            </p>-->
+            <p text-center class="fecha">
+                {{p.location}}
+            </p>
             <img src="../../assets/imgs/Banderas/{{p.home_team.country}}.png" alt="Imagen del equipo" width="30" height="15"> {{p.home_team.code}} {{p.home_team.goals}} - {{p.away_team.goals}} {{p.away_team.code}}
             <img src="../../assets/imgs/Banderas/{{p.away_team.country}}.png" alt="Imagen del equipo" width="30" height="15">
             <p text-center class="estado" *ngIf=" p.status == 'completed'">Terminado</p>

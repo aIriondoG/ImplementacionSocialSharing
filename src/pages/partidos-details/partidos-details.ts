@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 //Implementacion de social sharing
 import { SocialSharing } from '@ionic-native/social-sharing';
-
+//Implementacion de af2
+import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import { MapaPage } from '../mapa/mapa';
+import {Observable} from 'rxjs/Rx'; 
+import 'rxjs/add/operator/map';
 @IonicPage()
 @Component({
   selector: 'page-partidos-details',
@@ -13,12 +17,21 @@ export class PartidosDetailsPage {
   sEventoLocal: any;
   sEventoVisitante: any;
   eventos: any;
-  sItem: any[];
-  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing) {
+  sItem: any;
+
+  local: any;
+  listaLocalizaciones: AngularFireList<any>;
+  localizacion: Observable<any>;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private socialSharing: SocialSharing , public afDatabase: AngularFireDatabase) {
     this.sItem = navParams.get('partido');
     /*this.sELocal = this.sItem.eventoL;*/
     this.sEventoLocal = this.sItem.home_team_events;
     this.sEventoVisitante = this.sItem.away_team_events;
+
+    this.listaLocalizaciones = this.afDatabase.list('/Posicion');
+    this.localizacion = this.listaLocalizaciones.valueChanges();
+    
+    
     //this.eventos = this.sEventoLocal.concat(this.sEventoVisitante);
     //this.eventos = this.sEventoVisitante;
   }
@@ -59,5 +72,19 @@ viaWhatsapp(p){
 }
 //this.social.shareViaFacebookWithPasteMessageHint(message, image, url, pasteMessageHint);
 //this.social.shareViaInstagram(message, image);
+localizar(event, nombre){
+  this.localizacion.subscribe(
+    (data) => {
+      console.log(data);
+      this.local = data;
+      console.log("Antes: " + this.local);
+      this.navCtrl.push(MapaPage, {
+        local: this.local,
+        nombre: nombre
+      });
+    }
+  );
+
+}
 
 }

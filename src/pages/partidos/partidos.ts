@@ -4,11 +4,12 @@ import { PartidosDetailsPage } from '../partidos-details/partidos-details'
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { ToastController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
-import { Observable } from '@firebase/util';
 import { AuthProvider } from '../../providers/auth/auth';
 import { StatusBar } from '@ionic-native/status-bar';
 import { ContactoPage } from '../contacto/contacto';
-
+//Implementaciones errores observables
+import {Observable} from 'rxjs/Rx';
+ import 'rxjs/add/operator/map';
 @IonicPage()
 @Component({
   selector: 'page-partidos',

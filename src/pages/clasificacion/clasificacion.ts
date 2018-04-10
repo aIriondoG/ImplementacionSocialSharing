@@ -6,13 +6,16 @@ import { LoadingController } from 'ionic-angular';
 import { ClasificacionDetailsPage } from '../clasificacion-details/clasificacion-details';
 //Importacion de afb2
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
-import { Observable } from '@firebase/util';
+
 import { EquipoDetailsPage } from '../equipo-details/equipo-details';
 //Importacion de ordenar
 //import { Ordenar } from '../../app/pipes/miPipe';
 import { AuthProvider } from '../../providers/auth/auth';
 import { ContactoPage } from '../contacto/contacto';
 
+//Implementacion
+import {Observable} from 'rxjs/Rx';
+import 'rxjs/add/operator/map';
 @IonicPage()
 @Component({
   selector: 'page-clasificacion',
