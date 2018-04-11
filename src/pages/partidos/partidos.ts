@@ -81,7 +81,7 @@ export class PartidosPage {
   presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Cargando partidos...",
-      duration: 2000
+      duration: 1500
     });
     loader.present();
   }

@@ -3,7 +3,6 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ToastController } from 'ionic-angular';
 import { LoadingController } from 'ionic-angular';
 //Importacion de paginaas
-import { ClasificacionDetailsPage } from '../clasificacion-details/clasificacion-details';
 //Importacion de afb2
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 
@@ -93,7 +92,7 @@ export class ClasificacionPage {
   presentLoading() {
     let loader = this.loadingCtrl.create({
       content: "Cargando grupos...",
-      duration: 1500
+      duration: 1000
     });
     loader.present();
   }

@@ -12,6 +12,10 @@ page-clasificacion {
 
         //background-color: red;
     }
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
     .rp{
         background-image: url("../../assets/imgs/mundial.jpg");
         background-repeat:no-repeat;
@@ -44,5 +48,23 @@ page-clasificacion {
         margin-left: 3em;
         margin-right: 3em;
         
+    }
+    //ç
+    .header .col {
+        background-color:lightgrey;
+    }
+    
+    .col {
+        border: solid 1px grey;
+        border-bottom-style: none;
+        border-right-style: none;
+    }
+    
+    .col:last-child {
+        border-right: solid 1px grey;
+    }
+    
+    .row:last-child .col {
+        border-bottom: solid 1px grey;
     }
 }

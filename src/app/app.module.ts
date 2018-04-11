@@ -12,7 +12,6 @@ import { EquipoDetailsPage } from '../pages/equipo-details/equipo-details';
 import { PartidosDetailsPage } from '../pages/partidos-details/partidos-details';
 import { TabsPage } from '../pages/tabs/tabs';
 import {ClasificacionPage} from '../pages/clasificacion/clasificacion';
-import {ClasificacionDetailsPage} from "../pages/clasificacion-details/clasificacion-details";
 //Autoprovider
 //Importacion de social sharing
 import { SocialSharing } from '@ionic-native/social-sharing';
@@ -49,7 +48,6 @@ export const config = {
     EquipoDetailsPage,
     PartidosDetailsPage,
     ClasificacionPage,
-    ClasificacionDetailsPage,
     SortPipe,
     RegistroPage,
     ContactoPage,
@@ -73,7 +71,6 @@ export const config = {
     EquipoDetailsPage,
     PartidosDetailsPage,
     ClasificacionPage,
-    ClasificacionDetailsPage,
     RegistroPage,
     ContactoPage,
     MapaPage
